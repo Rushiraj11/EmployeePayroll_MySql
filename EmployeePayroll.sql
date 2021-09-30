@@ -79,3 +79,14 @@ select count(*) as 'Total_Male_Employee' from employee_payroll  where gender='M'
 select count(*) as 'Total_Female_Employee' from employee_payroll  where gender='F';
  
 select sum(salary) as 'Salary Sum',gender from employee_payroll group by gender;
+--- UC8
+select *from employee_payroll;
+alter table employee_payroll add phone varchar(20);
+alter table employee_payroll add addrerss varchar(80) default' abcde';
+alter table employee_payroll add department varchar(20) not null;
+
+desc employee_payroll;
+--- UC9
+select *from employee_payroll;
+alter table employee_payroll rename COLUMN salary To basic_pay;
+alter table employee_payroll add deductions int, add taxable int, add income_tax int, add net_pay int;
