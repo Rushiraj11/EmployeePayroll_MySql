@@ -90,3 +90,12 @@ desc employee_payroll;
 select *from employee_payroll;
 alter table employee_payroll rename COLUMN salary To basic_pay;
 alter table employee_payroll add deductions int, add taxable int, add income_tax int, add net_pay int;
+
+--- UC10
+select *from employee_payroll;
+insert into employee_payroll
+(name,basic_pay,startDate,gender,department,deductions,taxable,income_tax,net_pay)
+values('Terissa','50000','2019-12-01','F','Marketing','4000','6000','10000','30000');
+insert into employee_payroll
+(name,basic_pay,startDate,gender,department,deductions,taxable,income_tax,net_pay)
+values('Terissa','50000','2020-06-01','F','Sales','0','0','0','0');
